@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+<head>
+    <meta charset="utf-8" />
+    <title>Flask Parent Template</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/template.css')}}" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Julia Ha Website</h1>
+            <div class="btn-group btn-group-lg" role="group">
+                <a href="{{url_for('home')}}" class="btn btn-danger" role="button">Home</a>
+                <a href="{{url_for('statistics')}}" class="btn btn-danger" role="button">Statistics</a>
+                <button type="button" class="btn btn-danger">Option 1</button>
+                <button type="button" class="btn btn-danger">Option 2</button>
+                <button type="button" class="btn btn-danger">Option 3</button>
+            </div>
+        </div>
+    </header>
+    {%block content%}
+    {%endblock%}
+</body>
+</html>
